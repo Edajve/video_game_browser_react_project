@@ -6,16 +6,16 @@ export interface Game {
     id: number;
     name: string;
     rating: string;
+    background_image: string
   }
   
-  export interface FetchGamesResponse {
+export interface FetchGamesResponse {
     count: number;
     results: Game[];
-  }
-  
+}
 
 const useGames = () => {
-    const controller = new AbortController()
+  const controller = new AbortController()
   const [games, setGames] = useState<Game[]>([]);
   const [error, setError] = useState("");
 
